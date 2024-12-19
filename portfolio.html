@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Interactive Portfolio</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Include Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">AB</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#work">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Resume</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </header>
+
+    
+
+    <section class="work" id="work">
+        <h2 class="section-title">Selected Works</h2>
+        <div class="portfolio-grid">
+            <article class="portfolio-item fade-in">
+                <div class="portfolio-image-wrapper">
+                    <img src="https://via.placeholder.com/600x800/333333/FFFFFF?text=Project+One" alt="Project One">
+                </div>
+                <h3>Project One</h3>
+                <p>Branding & Identity</p>
+            </article>
+            <article class="portfolio-item fade-in">
+                <div class="portfolio-image-wrapper">
+                    <img src="https://via.placeholder.com/600x800/444444/FFFFFF?text=Project+Two" alt="Project Two">
+                </div>
+                <h3>Project Two</h3>
+                <p>Website Redesign</p>
+            </article>
+            <article class="portfolio-item fade-in">
+                <div class="portfolio-image-wrapper">
+                    <img src="https://via.placeholder.com/600x800/555555/FFFFFF?text=Project+Three" alt="Project Three">
+                </div>
+                <h3>Project Three</h3>
+                <p>UX/UI & Animation</p>
+            </article>
+        </div>
+    </section>
+
+   
+
+    <footer class="footer">
+        <p>© 2024 Anika Bhagavatula</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
