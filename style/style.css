@@ -1,0 +1,266 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111;
+    background: #000000;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header / Navigation */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: background 0.3s ease;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: rgb(189, 189, 189);
+}
+
+/* Responsive menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Hero */
+
+
+.hero {
+    padding-top:10%;
+    position: relative;
+    background: transparent; /* make it transparent so the canvas shows through */
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2; /* above the canvas */
+    pointer-events: none;
+  }
+  
+  .three-container {
+ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* ensure it's beneath .hero-content but above hero background */
+    pointer-events: all;
+  }
+
+
+  
+  
+
+.hero-title {
+    font-size: 5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    padding-top: 20%;
+    text-align: center;
+    color:rgb(255, 255, 255);
+}
+
+.hero-subtitle {
+    display: flex;
+    justify-content: center; 
+    width: 50%;
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    padding-top: 20%;
+  
+}
+
+/* Sections */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.work, .about, .contact {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.portfolio-image-wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.portfolio-image-wrapper img {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-item p {
+    color: rgb(201, 201, 201);
+    font-size: 1rem;
+}
+
+/* About & Contact */
+.about p, .contact p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgb(201, 201, 201);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: rgb(195, 195, 195);
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: rgb(121, 121, 121);
+}
+
+/* Footer */
+.footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgb(179, 179, 179);
+}
+
+/* Responsive Navigation for Mobile */
+@media (max-width: 768px) {
+    .nav ul {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #000;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        border-top: 1px solid #000;
+    }
+
+    .nav ul.open {
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Responsiveness for Hero and Titles */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Smooth reveal animations (will trigger via JS) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, tr
