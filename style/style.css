@@ -24,8 +24,14 @@ img {
     display: block;
 }
 
+.linkedin-img {
+    width: 2%;
+    
+    text-align: center;
+}
+
 /* Header / Navigation */
-.header {
+/* .header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -38,18 +44,92 @@ img {
     background: rgb(0, 0, 0);
     border-bottom: 1px solid rgb(0, 0, 0);
     transition: background 0.3s ease;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000; /* Adjust as needed */
 }
 
 .logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
+    display: flex; 
+    font-size: 1em;
+    align-items: left; 
+    flex-direction: column;
+    cursor: pointer; 
+    transition: transform 0.3s ease; 
+    position: relative;
+    overflow: visible; 
+    width: 40%;
 }
+
+
+
+
+/* Base Letter Styling */
+.letter {
+    font-size: 2em; 
+    margin-left: 10%;
+    color: white;
+    width: 40%;
+    
+}
+
+.role {
+    font-size: 2em; 
+    margin-left: 10%;
+    color: rgb(255, 76, 76);
+    width: 40%;
+    
+}
+
+.role .cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #aeaeae; 
+    animation: blink 0.9s steps(2) infinite;
+    margin-left: 2px; 
+    height: 1em; 
+    vertical-align: text-bottom;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .letter {
+        font-size: 1.5em; 
+    }
+    
+    .extra {
+        font-size: 0.7em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .letter {
+        font-size: 1.2em; 
+    }
+    
+    .extra {
+        font-size: 0.6em;
+    }
+}
+
 
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    text-align: right;
+    flex-direction: column;
+    padding-top: 50%;
+    padding-right: 10%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    gap: 1rem;
 }
 
 .nav a {
@@ -61,7 +141,7 @@ img {
 }
 
 .nav a:hover {
-    color: rgb(189, 189, 189);
+    color: rgb(164, 164, 164);
 }
 
 /* Responsive menu */
@@ -86,7 +166,12 @@ img {
 
 
 .hero {
-    padding-top:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 80vh; 
+    padding-top:0%;
     position: relative;
     background: transparent; /* make it transparent so the canvas shows through */
   }
@@ -109,6 +194,58 @@ img {
     pointer-events: all;
   }
 
+  .intro-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    height: 50vh;         
+       
+    box-sizing: border-box; 
+}
+.introduction {
+    text-align: center;
+}
+/* h1.hello {
+    color: gray;
+    font-size: 4em; 
+} */
+.hello {
+    color: rgb(165, 165, 165);
+    font-size: 3em; /* Adjust as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block; 
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .hello {
+        font-size: 2em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hello {
+        font-size: 1.5em;
+    }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+h2.intro {
+    color: white;
+    text-align: center;
+    max-width: 800px;       
+    margin: 0 auto;        
+    font-size: 1.5em;         
+}
+
 
   
   
@@ -117,24 +254,13 @@ img {
     font-size: 5rem;
     line-height: 1.2;
     margin-bottom: 1rem;
-    padding-top: 20%;
+    padding-top: 0%;
     text-align: center;
     color:rgb(255, 255, 255);
 }
 
-.hero-subtitle {
-    display: flex;
-    justify-content: center; 
-    width: 50%;
-    font-family: "Playfair Display", serif;
 
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
-    padding-top: 20%;
-  
-}
 
-/* Sections */
 .section-title {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -221,9 +347,13 @@ img {
 
 /* Footer */
 .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 2rem;
     text-align: center;
     font-size: 0.9rem;
+    line-height: 200%;
     color: rgb(179, 179, 179);
 }
 
@@ -259,8 +389,9 @@ img {
     }
 }
 
-/* Smooth reveal animations (will trigger via JS) */
+/* Smooth reveal animations (will trigger w JS) */
 .fade-in {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.8s ease, tr
+    transition: opacity 0.8s ease,
+}
